@@ -1,11 +1,11 @@
 # Image URL to use for building/pushing images
 TAG ?= latest
-IMG ?= gitopsbook/example-operator:${TAG}
+IMG ?= docker.io/klines/gitops:${TAG}
 
 # Build the docker image
 docker-build:
-	docker build . -t ${IMG}
+	podman build . -t ${IMG}
 
 # Push the docker image
 docker-push:
-	docker push ${IMG}
+	podman push ${IMG}

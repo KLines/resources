@@ -15,7 +15,7 @@ spec:
           serviceAccountName: gitops-serviceaccount  #F
           containers:
           - name: gitops-operator
-            image: gitopsbook/example-operator:v1.0  #G
+            image: docker.io/klines/gitops:v1.0  #G
             command: [sh, -e, -c]                    #H
             args:
             - git clone https://github.com/klines/sample-app-deployment.git /tmp/example &&
