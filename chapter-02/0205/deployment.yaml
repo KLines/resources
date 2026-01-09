@@ -4,7 +4,7 @@ metadata:
   name: sample-app
 spec:
   replicas: 1
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
       app: sample-app
@@ -16,7 +16,7 @@ spec:
       containers:
       - command:
         - /app/sample-app
-        image: gitopsbook/sample-app:latest
+        image: klines/sample-app:latest
         name: sample-app
         ports:
         - containerPort: 8080
